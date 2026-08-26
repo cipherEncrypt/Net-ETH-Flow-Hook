@@ -1,6 +1,5 @@
 # Net ETH Flow Hook
 
-**Repo:** https://github.com/cipherEncrypt/Net-ETH-Flow-Hook
 
 Uniswap v4 hook that tracks how much native ETH flows into and out of one pool.
 
