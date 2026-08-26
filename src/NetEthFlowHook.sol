@@ -12,7 +12,6 @@ import {BeforeSwapDelta, BeforeSwapDeltaLibrary} from "@uniswap/v4-core/src/type
 import {ImmutableState} from "v4-periphery/src/base/ImmutableState.sol";
 
 /// @title NetEthFlowHook
-/// @author dex_cipher workshop PoC
 /// @notice Tracks native ETH moving into and out of a single Uniswap v4 pool.
 ///
 /// @dev This is a proof of concept. The goal is a simple on-chain signal that other
