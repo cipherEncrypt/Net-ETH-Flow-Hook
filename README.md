@@ -1,5 +1,7 @@
 # Net ETH Flow Hook
 
+**Repo:** https://github.com/cipherEncrypt/Net-ETH-Flow-Hook
+
 Uniswap v4 hook that tracks how much native ETH flows into and out of one pool.
 
 The hook exposes cumulative inflow, cumulative outflow, and per-epoch breakdowns on-chain. Off-chain tools (treasury monitors, reserve alerts, analytics jobs) can read the counters directly or index the events without reimplementing swap parsing.
@@ -63,7 +65,7 @@ Time is split into fixed windows for scoped totals:
 ```solidity
 event SwapTracked(
     uint256 indexed epochId,
-    FlowDirection direction,  // Inflow or OutflowNN
+    FlowDirection direction,  // Inflow or Outflow
     uint256 amount,
     address indexed sender,
     uint256 timestamp
@@ -96,13 +98,20 @@ remappings.txt             Import paths
 
 ## Setup
 
-Install Foundry, then pull dependencies:
+Clone with submodules, then install Foundry deps:
 
 ```bash
-forge install Uniswap/v4-core Uniswap/v4-periphery
+git clone --recurse-submodules https://github.com/cipherEncrypt/Net-ETH-Flow-Hook.git
+cd Net-ETH-Flow-Hook
+forge install foundry-rs/forge-std
 ```
 
-If the libs are already in `lib/`, skip that step.
+If you already cloned without submodules:
+
+```bash
+git submodule update --init --recursive
+forge install foundry-rs/forge-std
+```
 
 ## Commands
 
