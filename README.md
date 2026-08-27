@@ -7,7 +7,7 @@ The hook exposes cumulative inflow, cumulative outflow, and per-epoch breakdowns
 
 Built with Foundry. Depends on [v4-core](https://github.com/Uniswap/v4-core) and [v4-periphery](https://github.com/Uniswap/v4-periphery).
 
-## What it does
+## What it does.
 
 Every swap on a native ETH pool triggers `afterSwap`. The hook reads the executed `BalanceDelta`, finds the ETH leg, and updates:
 
